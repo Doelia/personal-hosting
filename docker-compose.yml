@@ -16,3 +16,9 @@ services:
       - VIRTUAL_HOST=bourbaki.doelia.fr
       - VIRTUAL_PORT=2000
 
+  realtimeboard:
+    image: realtimeboard 
+    environment:
+      - VIRTUAL_HOST=whiteboard.doelia.fr
+      - VIRTUAL_PORT=8080
+

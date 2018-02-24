@@ -16,6 +16,9 @@ HOST_IP=$(docker-machine ip $AWS_EC2_ID)
 update_record bourbaki.doelia.fr $HOST_IP
 build_docker_app "go-bourbaki"
 
+update_record whiteboard.doelia.fr $HOST_IP
+build_docker_app "realtimeboard"
+
 docker-compose up -d
 
 
