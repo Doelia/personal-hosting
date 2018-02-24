@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+  go-bourbaki:
+    ports:
+     - "2000:2000"
+    image: go-bourbaki 
+    environment:
+      - VIRTUAL_HOST=bourbaki.doelia.fr
+      - VIRTUAL_PORT=2000
+
