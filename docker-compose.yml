@@ -22,3 +22,8 @@ services:
       - VIRTUAL_HOST=whiteboard.doelia.fr
       - VIRTUAL_PORT=8080
 
+  minelia:
+    image: minelia
+    environment:
+      - VIRTUAL_HOST=minelia.doelia.fr
+
