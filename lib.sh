@@ -35,12 +35,12 @@ clone()
 	repo=$1
 	rm -rf repos/$repo
 	git clone https://github.com/doelia/$repo repos/$repo
-	docker build repos/$repo -t $repo
 }
 
 clone_and_build()
 {
 	repo=$1
 	clone $repo
-
+	docker build repos/$repo -t $repo
 }
+
