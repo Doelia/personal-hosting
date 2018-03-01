@@ -30,7 +30,7 @@ update_record()
 
 }
 
-build_docker_app()
+clone()
 {
 	repo=$1
 	rm -rf repos/$repo
@@ -38,3 +38,9 @@ build_docker_app()
 	docker build repos/$repo -t $repo
 }
 
+clone_and_build()
+{
+	repo=$1
+	clone $repo
+
+}

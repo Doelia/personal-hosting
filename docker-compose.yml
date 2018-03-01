@@ -27,3 +27,12 @@ services:
     environment:
       - VIRTUAL_HOST=minelia.doelia.fr
 
+  dominion:
+    build: ./dominion-proxy
+    environment:
+      - VIRTUAL_HOST=dominion.doelia.fr
+  dominion-server:
+    image: dominion-server 
+  dominion-client:
+    image: dominion-client
+
